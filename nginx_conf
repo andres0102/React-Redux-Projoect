@@ -1,0 +1,41 @@
+server {
+  listen      80 default_server;
+  server_name www.kardies.gr kardies.gr;
+  return      301 https://kardies.gr$request_uri;
+}
+
+
+server {
+  listen 443 ssl http2;
+  server_name kardies.gr;
+
+  ssl on;
+  ssl_certificate /etc/nginx/ssl/kardies_gr/ssl-bundle.crt;
+  ssl_certificate_key /etc/nginx/ssl/kardies_gr/kardies_gr.key;
+  ssl_prefer_server_ciphers on;
+
+  root /home/deployer/apps/kardies-frontend;
+  index index.html;
+
+  client_max_body_size 4G;
+  keepalive_timeout 10;
+
+  error_page 500 502 504 /500.html;
+  error_page 503 @503;
+
+  ssl_stapling on;
+  ssl_stapling_verify on;
+  ssl_trusted_certificate /etc/nginx/ssl/kardies_gr/ssl-bundle.crt;
+
+  location / {
+    proxy_pass http://localhost:3000/;
+
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+  }
+
+  if ($request_method !~ ^(GET|HEAD|PUT|PATCH|POST|DELETE|OPTIONS)$ ){
+    return 405;
+  }
+}

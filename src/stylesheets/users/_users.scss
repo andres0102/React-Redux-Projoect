@@ -1,0 +1,122 @@
+.effect1 {
+  -webkit-box-shadow: 0 6px 6px -6px #777;
+  -moz-box-shadow: 0 6px 6px -6px #777;
+  box-shadow: 0 6px 6px -6px #777;
+}
+
+.effect2 {
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+.effect3 {
+  -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
+  -moz-box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
+  box-shadow: 0 0 8px 0 rgba(0,0,0,.3);
+}
+
+.ui-dialog {
+  position: fixed;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.faa-pulse.animated,
+.faa-pulse.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-pulse {
+  -webkit-animation: pulse 2s linear infinite;
+  animation: pulse 2s linear infinite;
+}
+
+.faa-pulse.animated.faa-fast,
+.faa-pulse.animated-hover.faa-fast:hover,
+.faa-parent.animated-hover:hover > .faa-pulse.faa-fast {
+  -webkit-animation: pulse 1s linear infinite;
+  animation: pulse 1s linear infinite;
+}
+
+.faa-pulse.animated.faa-slow,
+.faa-pulse.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-pulse.faa-slow {
+  -webkit-animation: pulse 3s linear infinite;
+  animation: pulse 3s linear infinite;
+}
+
+.narrow {
+  transform: scaleX(0.9);
+}
+
+.online-now {
+  background-color: $online_green;
+  padding: 0.4rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.profile-pic-modal {
+  display: block;
+  width: 100%;
+  max-height: auto;
+}
+
+.my-profile a {
+  display: block;
+  color: $black;
+  text-shadow: 0.5px 0.5px $white;
+}
+
+.my-profile a:hover {
+  text-decoration: none;
+  color: $orange;
+}
+
+.page-load-status {
+  display: none; /* hidden by default */
+}
+
+#reportModal {
+  background-color: $red;
+  color: $white;
+}
+
+.modal-title {
+  padding: 1rem;
+  background: $teal;
+}

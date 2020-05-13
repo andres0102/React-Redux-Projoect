@@ -1,0 +1,30 @@
+.square-picture {
+  width: 150px;
+  height: 150px;
+  margin: 0.2rem;
+  object-fit: cover;
+  background-color: $aluminium;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.square-picture:hover {
+  width: 160px;
+  cursor: pointer;
+}
+
+.square-picture-modal {
+  max-height: 600px;
+  max-width: 600px;
+  object-fit: cover;
+  background-color: $aluminium;
+}
+
+@media(max-width: 800px) {
+  .square-picture-modal {
+    max-height: 300px;
+    max-width: 400px;
+    object-fit: cover;
+    background-color: $aluminium;
+  }
+}

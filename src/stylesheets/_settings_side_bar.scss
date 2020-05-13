@@ -1,0 +1,59 @@
+#sidebar-settings {
+  ul {
+    padding: 0;
+    text-align: left;
+    list-style-type: none;
+  }
+
+  li {
+    padding: 2rem 0;
+    text-decoration: none;
+    border-bottom: 0.5px solid $aluminium;
+  }
+
+  li:hover {
+    cursor: pointer;
+
+    .fa {
+      font-size: 1.5rem;
+
+      -webkit-transition: font-size 0.3s ease;
+      -moz-transition: font-size 0.3s ease;
+      -o-transition: font-size 0.3s ease;
+      -ms-transition: font-size 0.3s ease;
+      transition: font-size 0.3s ease;
+    }
+  }
+}
+
+@media all and (max-width: 992px) {
+  #sidebar-settings {
+    ul {
+      padding: 0;
+      text-align: center;
+      list-style-type: none;
+    }
+
+    i {
+      display: none;
+    }
+
+    li {
+      padding: 1rem 0;
+      text-decoration: none;
+      border: none;
+      border-right: 0.5px solid $aluminium;
+      border-left: 0.5px solid $aluminium;
+    }
+
+    li:hover {
+      cursor: pointer;
+      background: $orange;
+
+      -webkit-transition: background-color 0.5s ease-out;
+      -moz-transition: background-color 0.5s ease-out;
+      -o-transition: background-color 0.5s ease-out;
+      transition: background-color 0.5s ease-out;
+    }
+  }
+}

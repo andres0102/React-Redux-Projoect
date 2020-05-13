@@ -1,0 +1,150 @@
+.ui {
+  background-color: $white;
+  border-radius: 3px;
+  flex-direction: row;
+  display: flex;
+  overflow: hidden;
+
+  #left-menu {
+    height: 645px;
+    min-width: 250px;
+    width: 250px;
+    background: $teal;
+    overflow-y: scroll;
+  }
+
+  #left-menu-small {
+    height: 645px;
+    min-width: 65px;
+    width: 65px;
+    background: $teal;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .closebtn {
+    color: $orange;
+    font-size: 20px;
+    margin-left: 23px;
+  }
+
+  .chat {
+    width: 100%;
+    background: $whitesmoke;
+
+    .info {
+      padding-left: 10px;
+      flex-direction: column;
+      vertical-align: 40px;
+      width: 100%;
+
+      .name {
+        font-weight: 600;
+        color: #434753;
+        height: 50%;
+      }
+      .count {
+        color: #6d738d;
+      }
+    }
+    i.fa {
+      color: #d6d9de;
+      vertical-align: 25px;
+    }
+  }
+
+	ul {
+		margin: 0;
+	}
+
+  .messages {
+    height: 540px;
+    width: 100%;
+    list-style: none;
+    border: 2px solid #fff;
+    border: none;
+    word-wrap: break-word;
+    padding-left: 0px;
+
+    li.message-bubble {
+      margin: 20px 35px 10px 10px;
+      transition: all .5s;
+
+      &:after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+
+      .head {
+        font-size: 13px;
+      }
+
+      .name {
+        font-weight: 600;
+        position: relative;
+      }
+
+      .time {
+        color: #b7bccf;
+      }
+
+      .message {
+        margin-top: 5px;
+        color: $black;
+        font-size: 15px;
+        border-radius: 5px;
+        line-height: 25px;
+        width: 100%;
+        word-wrap: break-word;
+        position: relative;
+      }
+    }
+
+    li.message-bubble{
+      .message-white {
+        background-color: $white;
+        padding: 0.5rem;
+      }
+
+      .message-blue {
+        background-color: $light_blue;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .input_msg_write textarea {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+    resize: none;
+    color: #4c4c4c;
+    min-height: 48px;
+    width: 70%;
+  }
+
+  .type_msg {
+    position: relative;
+  }
+
+  .btn-circle {
+    position: absolute;
+    right: 3.6rem;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    border-radius: 35px;
+    font-size: 20px;
+    line-height: 1.33;
+  }
+
+  .avatar>img {
+    border-color: $aluminium;
+    margin: 10px;
+    margin-right: 5px;
+  }
+  .avatar {
+    display: inline-block;
+    width: 100%;
+  }
+}
